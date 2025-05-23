@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --mc: rgb(255, 221, 179);
+    --mc2: rgb(7, 80, 71);
+}
+#general{
+    margin-left: 40vw;
+    margin-top: 35vw;
+}
+#QuestionText{
+    font-size: 2vw;
+    margin-top: -3vw;
+    position: absolute;
+    margin-left: 3vw ;
+    font-family: cursive, "calibri";
+    color: var(--mc);
+}
+select{
+    position: absolute;
+    width: 20vw;
+    height: 3vw;
+    font-size: 2.2vw;
+    box-shadow: 0 0 1vw ;
+}
+#logo{
+    position: absolute;
+    width: 28vw;
+    margin-top: -22.5vw;
+    transition: 1.2s;
+    margin-left: -3.5vw;
+    transition: 1.5s;
+}
+
+#Confirm{
+    position: absolute;
+    width: 20vw;
+    margin-top: 3.5vw;
+    font-size: 2vw;
+    height: 3.5vw;
+    background-color: var(--mc);
+    color: var(--mc2);
+    font-weight: 700;
+    cursor: pointer;
+}
+footer{
+    position: absolute;
+    font-size: 2vw;
+    margin-left: 39vw;
+    margin-top: 16vw;
+    font-weight: 900;
+    color: var(--mc);
+
+}
+#mainBg{
+    position: absolute;
+    width: 100vw;
+    margin-top: -38vw;
+}
+
+
+#errorText{
+    position: absolute;
+    color: red;
+    font-size: 2vw;
+    margin-left: 2vw;
+    margin-top: 4vw;
+    background-color: var(--mc);
+}
+#signField{
+    position: absolute;
+    box-shadow: 0 0 1vw inset, 0 0 1vw ;
+    border: 0.3vw solid var(--mc);
+    width: 55vw;
+    margin-top: -26.5vw;
+    margin-left: -17.8vw;
+    border-radius: 2vw;
+    backdrop-filter: blur(1vw);
+    font-size: 1.8vw;
+    padding: 3vw;
+    padding-top:10vw;
+    color: var(--mc);
+    background-color: rgba(7, 80, 72, 0.553);
+    height: 30vw;
+}
+#signField h1{
+ position: absolute;
+ margin-top: -7vw;
+  
+}
+#signField input{
+    position: absolute;
+    border-radius: 1vw;
+    margin-left: 6vw;
+    margin-top: -0.5vw;
+    font-size: 2vw;
+    padding: 0.7vw;
+    width: 30vw;
+    border: 0.3vw solid var(--mc);
+  
+}
+#PassInp{
+    margin-top: 4vw;
+}
+#PassInp input{
+    margin-left: 3.7vw;
+}
+#btnSub{
+    position: absolute;
+    margin-left: 15vw;
+    width: 20vw;
+    font-size: 2vw;
+    margin-top: 4vw;
+    cursor: pointer;
+}
