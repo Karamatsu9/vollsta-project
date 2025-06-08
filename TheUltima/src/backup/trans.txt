@@ -1,0 +1,114 @@
+      {/* <div className='addField' style={{display: dispInputField ? "block" : "none"}}>
+          <div className="ContainerimgAddField">
+            <img src="https://iopwiki.com/images/1/10/Clukay.png" className="imgAddField" />
+          </div>
+
+          <div className="insertField">
+            <h1>{editMode ? 'Edit Order' : 'Add New Order'}</h1>
+            Item Name:
+            <input 
+              type="text" 
+              id='inputFirudo' 
+              value={inputItemName}
+              onChange={(e) => setInputItemName(e.target.value)} 
+              placeholder="" 
+              className="InpBar" 
+            /><br />
+            
+            Price:
+            <input 
+              type="number" 
+              id='inputFirudo' 
+              value={inputPrice}
+              onChange={(e) => setInputPrice(e.target.value)} 
+              placeholder="" 
+              className="InpBar" 
+            /><br />
+            
+            Status:
+            <select 
+              id='inputFirudo' 
+              value={inputStatus}
+              onChange={(e) => setInputStatus(e.target.value)}
+              className="InpBar"
+              style={{ width: '20.5vw', padding: '0.4vw' }}
+            >
+              <option value="pending">Pending</option>
+              <option value="accepted">Accepted</option>
+              <option value="rejected">Rejected</option>
+              <option value="processing">Processing</option>
+              <option value="completed">Completed</option>
+            </select><br />
+          </div>
+
+          <button
+            className="submitData"
+            onClick={() => {
+              const data = {
+                item_name: inputItemName,
+                price: inputPrice,
+                status: inputStatus
+              };
+
+              if (editMode) {
+                // Edit existing order
+                axios
+                  .put(`http://localhost:5000/api/orders/${editingOrderId}`, data)
+                  .then(() => {
+                    alert("Order updated successfully!");
+                    setDispInputField(false);
+                    setEditMode(false);
+                    setEditingOrderId(null);
+                    // Re-fetch orders
+                    axios.get("http://localhost:5000/api/orders").then(res => {
+                      setOrders(res.data);
+                    });
+                  })
+                  .catch(err => {
+                    console.error("Error updating order:", err);
+                    alert("Failed to update order.");
+                  });
+              } else {
+                // Add new order
+                axios
+                  .post("http://localhost:5000/api/orders", data)
+                  .then(() => {
+                    alert("Order added successfully!");
+                    setDispInputField(false);
+                    // Re-fetch orders
+                    axios.get("http://localhost:5000/api/orders").then(res => {
+                      setOrders(res.data);
+                    });
+                  })
+                  .catch(err => {
+                    console.error("Error adding order:", err);
+                    alert("Failed to add order.");
+                  });
+              }
+            }}
+          >
+            Submit
+          </button>
+
+          <button 
+            className='clearData' 
+            onClick={() => {
+              setInputItemName('');
+              setInputPrice('');
+              setInputStatus('pending');
+            }}
+          >
+            Clear
+          </button>
+          
+          <button 
+            className='exitField' 
+            onClick={() => {
+              setDispInputField(false);
+              setEditMode(false);
+              setEditingOrderId(null);
+            }}
+          >
+            X
+          </button>
+        </div> */}

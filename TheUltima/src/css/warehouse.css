@@ -1,0 +1,438 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+:root{
+    --mc: rgb(255, 228, 196);
+    --mc2: rgb(7, 80, 71);
+}
+.mainBg{
+    position: absolute;
+    width: 100vw;
+}
+.logo{
+    position: absolute;
+    width: 14vw;
+    margin-left: -1vw;
+    margin-top: -3vw;
+    transition: 1.5s;
+}
+nav{
+    position: absolute;
+    width: 12vw;
+    height: 57vw;
+    box-shadow: 0 0 3vw;
+    background-color: var(--mc2);
+}
+
+#menunav{
+    font-size: 1.2vw;
+    color: var(--mc);
+    width: 100%;
+    height: 30vw;
+    cursor: pointer;
+    margin-top: 15vw;
+    padding:2vw ;
+}
+
+.navbtn{
+    margin-top: 2vw;
+    padding:0.0vw;
+}
+.navbtn:hover{
+    margin-top: 2vw;
+    opacity: 0.7;
+}
+.navbtn:active{
+    transform: scale(1.1);
+}
+#warehouse{
+    padding: 0.5vw;
+    width: 10vw;
+    border: 0.2vw solid var(--mc);
+}
+
+.insertField{
+    position: absolute;
+    background-color: rgb(11, 101, 90);
+    width: 58vw;
+    font-size: 1vw;
+    height: 40vw;
+    border: 0.3vw solid rgb(2, 23, 21);
+    box-shadow: 0 0 2vw black;
+    border-radius: 2vw;
+    border-bottom-left-radius: 0vw;
+    color: var(--mc);
+    padding: 1.5vw;
+    margin-left: 30vw;
+    overflow-y: auto;
+}
+.ContainerimgAddField{
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    height: 50vw;
+    margin-top: 4vw;
+    margin-left: -31vw;
+}
+.submitData{
+    position: absolute;
+    margin-left: 65vw;
+    font-size: 2vw;
+    padding: 1vw;
+    width: 20vw;
+    cursor: pointer;
+    margin-top: 41vw;
+}
+.exitField{
+    position: absolute;
+    width: 5vw;
+    margin-left: 35vw;
+    font-size: 3vw;
+    background-color: crimson;
+    color: aliceblue;
+    padding: 0.3vw;
+    cursor: pointer;
+    margin-top: 41vw;
+}
+.clearData{
+    position: absolute;
+    margin-left: 42vw;
+    font-size: 2vw;
+    padding: 1vw;
+    width: 20vw;
+    cursor: pointer;
+    margin-top: 41vw;
+}
+.imgAddField{
+    position: absolute;
+    width: 100%;
+}
+.addField{
+    position: absolute;
+    background-color: rgba(4, 50, 45, 0.267);
+    color: var(--mc);
+    padding: 2vw;
+    height: 100%;
+    font-family: cursive,Arial, Helvetica, sans-serif;
+    backdrop-filter: blur(0.4vw);
+    margin-top: -45vw;
+    width: 100vw;
+}
+#titleWindow{
+    position: absolute;
+    font-size: 1.4vw;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.306);
+    color: var(--mc);
+    font-family: cursive;
+    font-weight: 100;
+    margin-left: 8.5vw;
+    padding: 1vw;
+    padding-left: 9vw;
+    margin-top: 1vw;
+    background-color: var(--mc2);
+}
+#desWindow{
+    position: absolute;
+    font-size: 1.7vw;
+    color: var(--mc);
+    font-family: cursive;
+    font-weight: 100;
+    margin-left: 4.5vw;
+    padding: 1vw;
+    padding-left: 9vw;
+    margin-top: 4vw;
+}
+
+#movingtext{
+    position: absolute;
+    font-size: 1.2vw;
+    color: var(--mc);
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 6vw;
+}
+.InpBar{
+    margin-top: 1vw;
+    width: 45vw;
+    height: 3vw;
+    margin-left: 2vw;
+    padding: 0.2vw;
+}
+
+/* StorageitemDetail */
+.btnBelow{
+    width: 10vw;
+    font-size: 1.5vw;
+    background-color: var(--mc);
+    color: var(--mc2);
+    border: 0.5vw ridge var(--mc2);
+    font-weight: 800;
+    box-shadow: 0 0 0.2vw black;
+    cursor: pointer;
+}
+.btnBelow:hover{
+    background-color: var(--mc2);
+    color: var(--mc);
+    border: 0.5vw  ridge var(--mc);
+}
+.btnBelow:active{
+    opacity: 0.7;
+}
+.footer{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: -2vw;
+}
+#copyright{
+    color: var(--mc);
+    position: absolute;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 83vw;
+}
+#warehouseMain{
+    position: absolute;
+    width: 85vw;
+    height: 45vw;
+    background-color: rgba(5, 60, 53, 0.831);
+    border-radius: 1vw;
+    box-shadow: inset 0 0 1.5vw ;
+    backdrop-filter: blur(0.5vw);
+    margin-top: 8vw;
+    margin-left: 13.5vw;
+}
+#StorageDisplay{
+    position: absolute;
+    color: var(--mc);
+    width: 58vw;
+    height: 13vw;
+    background-color: rgba(233, 198, 156, 0.799);
+    border-radius: 1vw;
+    box-shadow: inset 0 0 1.5vw ;
+    backdrop-filter: blur(0.5vw);
+    padding: 0.5vw;
+}
+#updateItemBar{
+    position: absolute;
+    color: var(--mc);
+    width: 58vw;
+    height: 3vw;
+    background-color: rgb(233, 198, 156);
+    border-radius: 1vw;
+    box-shadow: inset 0 0 1.5vw ;
+    margin-top: 14vw;
+    padding: 0.5vw;
+}
+#StorageItemList{
+    position: absolute;
+    width: 58vw;
+    padding-top: 1vw;
+    height: 27vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgb(10, 105, 93);
+    box-shadow: inset 0 0 1.5vw ;
+    backdrop-filter: blur(0.5vw);
+    margin-top: 17.5vw;
+    border-radius: 0 0 1vw 1vw;
+}
+
+/* Scrollbar styling */
+#StorageItemList::-webkit-scrollbar {
+    width: 0.8vw;
+}
+
+#StorageItemList::-webkit-scrollbar-track {
+    background: rgba(4, 50, 45, 0.5);
+}
+
+#StorageItemList::-webkit-scrollbar-thumb {
+    background: var(--mc2);
+    border-radius: 0.4vw;
+}
+
+#StorageItemList::-webkit-scrollbar-thumb:hover {
+    background: var(--mc);
+}
+
+.boxStorage{
+    float: left;
+    width: 10vw;
+    margin-left: 1vw;
+    font-size: 2vw;
+    padding: 2vw;
+    height: 13vw;
+    background-color: rgb(7, 80, 71);
+    box-shadow: inset 0 0 1.5vw black;
+    backdrop-filter: blur(0.5vw);
+    cursor: pointer;
+    border: 0.3vw solid var(--mc2);
+}
+.boxStorage:hover{
+    background-color: rgba(7, 80, 72, 0.824);
+    box-shadow: inset 0 0 1.5vw black;
+    backdrop-filter: blur(0.5vw);
+    border: 0.3vw solid var(--mc);
+}
+.boxStorage:active{
+    background-color: rgba(14, 15, 15, 0.824);
+    box-shadow: inset 0 0 1.5vw black;
+    backdrop-filter: blur(0.5vw);
+    border: 0.3vw solid var(--mc);
+}
+.iconBS{
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 1vw;
+}
+#StorageImg{
+    position: absolute;
+    width: 23.5vw;
+    height: 15vw;
+    background-color: rgba(233, 198, 156, 0.799);
+    box-shadow: inset 0 0 1.5vw ;
+    backdrop-filter: blur(0.5vw);
+    margin-top: 1vw;
+    margin-left: 60vw;
+}
+.StorageitemDetail{
+    position: absolute;
+    width: 23.5vw;
+    height: 27vw;
+    font-size: 1.1vw;
+    color: var(--mc);
+    background-color: rgb(4, 50, 45);
+    padding: 1vw;
+    font-family:cursive ,'Times New Roman', Times, serif;
+    box-shadow: inset 0 0 1.5vw black ;
+    backdrop-filter: blur(0.5vw);
+    margin-top: 17vw;
+    margin-left: 60vw;
+    line-height: 2vw;
+}
+#addItem{
+    font-size: 2.7vw;
+    width:  3vw;
+    height: 3vw;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2.5vw;
+    box-shadow: 0 0 1vw rgb(4, 50, 45);
+    border-radius: 50%;
+    background-color: rgb(4, 50, 45);
+    color: var(--mc);
+    font-weight: 700;
+    border: 0.2vw ridge var(--mc2);
+    position: absolute;
+    right: 0.5vw;
+    top: -0.3vw;
+}
+#addItem:hover{
+    background-color: var(--mc2);
+    transform: scale(1.1);
+}
+
+/* Item List Styling */
+.ItemList{
+    position: relative;
+    width: 54vw;
+    height: 5vw;
+    background-color: rgb(4, 50, 45);
+    margin-left: 1.5vw;
+    margin-top: 1vw;
+    border-radius: 1vw;
+    color: rgb(233, 198, 156);
+    font-size: 1.8vw;
+    cursor: pointer;
+    padding: 1.3vw;
+    border: 0.2vw solid rgb(233, 198, 156);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.ItemList:hover{
+    border: 0.2vw solid var(--mc);
+    background-color: rgba(4, 50, 45, 0.8);
+    color: rgb(233, 198, 156);
+    transform: translateX(0.5vw);
+}
+
+#itemName{
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20vw;
+}
+
+#itemStock{
+    position: absolute;
+    left: 22vw;
+    font-size: 1.5vw;
+    color: rgba(233, 198, 156, 0.8);
+}
+
+/* Status indicator styling */
+#itemStatus{
+    position: absolute;
+    left: 30vw;
+    padding: 0.3vw 1vw !important;
+    border-radius: 0.5vw !important;
+    font-size: 1vw !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
+}
+
+/* Action buttons */
+#EditBtn{
+    position: absolute;
+    right: 5.5vw;
+    font-size: 1.8vw;
+    padding: 0.5vw;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+#EditBtn:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 0.5vw rgba(255, 255, 255, 0.5));
+}
+
+#DeleteBtn{
+    position: absolute;
+    right: 2vw;
+    font-size: 1.8vw;
+    padding: 0.5vw;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+#DeleteBtn:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 0.5vw rgba(255, 0, 0, 0.5));
+}
+
+/* Make sure status colors are visible */
+.ItemList #itemStatus[style*="background-color: rgb(39, 174, 96)"] {
+    background-color: #27ae60 !important;
+    color: white !important;
+}
+
+.ItemList #itemStatus[style*="background-color: rgb(231, 76, 60)"] {
+    background-color: #e74c3c !important;
+    color: white !important;
+}
+
+.ItemList #itemStatus[style*="background-color: rgb(243, 156, 18)"] {
+    background-color: #f39c12 !important;
+    color: white !important;
+}

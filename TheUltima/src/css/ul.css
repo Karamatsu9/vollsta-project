@@ -1,0 +1,45 @@
+#updatelistUL {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 246, 231, 0.8); /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px; /* Limit the width of the table */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between table cells */
+}
+
+thead {
+  background-color: #065450; /* Header background color */
+  color: white; /* Header text color */
+}
+
+th, td {
+  padding: 12px; /* Padding for table cells */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #ddd; /* Bottom border for rows */
+}
+td{
+    color: #065450;
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+button {
+  background-color: #dc3545; /* Delete button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 8px 12px; /* Button padding */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}

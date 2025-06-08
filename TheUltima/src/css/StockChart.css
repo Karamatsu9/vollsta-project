@@ -1,0 +1,24 @@
+/* StockChart.css */
+
+.chart-container {
+  width: 100%; /* Full width of the parent container */
+  max-width: 800px; /* Maximum width for larger screens */
+  margin: 20px auto; /* Center the chart horizontally with some margin */
+  padding: 20px; /* Padding around the chart */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.chart-title {
+  text-align: center; /* Center the title */
+  font-size: 24px; /* Font size for the title */
+  margin-bottom: 20px; /* Space below the title */
+  color: #333; /* Dark color for the title */
+}
+
+.loading-message {
+  text-align: center; /* Center the loading message */
+  font-size: 18px; /* Font size for the loading message */
+  color: #666; /* Gray color for the loading message */
+}

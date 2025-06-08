@@ -1,0 +1,62 @@
+.addTransaction{
+    width: 100vw;
+    height: 60vw;
+    position: absolute;
+    backdrop-filter: blur(0.4vw);
+    background-color: rgba(5, 55, 47, 0.459);
+}
+.transactionForm{
+    position: absolute;
+    width: 50vw;
+    height: 30vw;
+    background-color: rgb(9, 82, 69);
+    border-radius: 1.3vw;
+    box-shadow: 0 0 2vw black;
+    margin-left: 40vw;
+    padding: 2vw;
+    margin-top: 2vw;
+}
+.imgChar{
+    position: absolute;
+    width: 42vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+.transactionForm h1{
+    font-size: 2vw;
+    color: white;
+}
+.TheExitField{
+    position: absolute;
+    padding: 0.7vw;
+    background-color: crimson;
+    color: white;
+    font-size: 3vw;
+    margin-left: 84vw;
+    margin-top: 2vw;
+    width: 5vw;
+}
+.btnBelow{
+    width: 10vw;
+    font-size: 1.5vw;
+    background-color: var(--mc);
+    color: var(--mc2);
+    border: 0.5vw ridge var(--mc2);
+    font-weight: 800;
+    box-shadow: 0 0 0.2vw black;
+    cursor: pointer;
+}
+.btnBelow:hover{
+    background-color: var(--mc2);
+    color: var(--mc);
+    border: 0.5vw  ridge var(--mc);
+}
+.btnBelow:active{
+    opacity: 0.7;
+}
+.footer{
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: -2vw;
+}
+

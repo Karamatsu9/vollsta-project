@@ -1,0 +1,200 @@
+// server.js
+const express = require('express');
+const cors = require('cors');
+const connection = require('./config/database'); // This is the MySQL connection
+
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+
+
+// Middlewarenya
+app.use(cors());
+app.use(express.json());
+
+const DashboardData = [
+    {
+        id: 0,
+        title: "Hp Vollsta X1",
+        from: "admin kenny",
+        des: "item ini baru saja ditambahkan ke dalam warehouse, kondisi aman, no minus"
+    },
+    {
+        id: 1,
+        title: "Hp Vollsta X2",
+        from: "admin ghazi",
+        des: "item ini kemarin saja ditambahkan ke dalam warehouse, kondisi aman, no minus"
+    },
+    {
+        id: 2,
+        title: "Hp Vollsta X3",
+        from: "admin kenny",
+        des: "item ini baru saja ditambahkan ke dalam warehouse, kondisi aman, no minus"
+    },
+    {
+        id: 3,
+        title: "Hp Vollsta G1",
+        from: "admin azril",
+        des: "item ini baru saja ditambahkan ke dalam warehouse, kondisi aman, no minus"
+    },
+    {
+        id: 4,
+        title: "Hp Vollsta Gx",
+        from: "admin azril",
+        des: "pake snapdragon 9s gen 1 mantul"
+    },
+]
+
+let dataw = [
+    {
+        id: 0,
+        name: "Vollsta Phone L1",
+        stock: 10,
+        ram: "12 GB",
+        rom: "256 GB",
+        chipset : "Snapdragon 955",
+        battery: "5000mAh",
+        camera: "50MP f/1.9,22mm (wide), 1/1.56', 0.5µm, PDAF OIS",
+        price: 7700000,
+    },
+    {
+        id: 1,
+        name: "Vollsta Phone L2",
+        stock: 10,
+        ram: "16 GB",
+        rom: "256 GB",
+        chipset : "Snapdragon 965",
+        battery: "5200mAh",
+        camera: "55MP f/1.9,22mm (wide), 1/1.56', 0.4µm, PDAF OIS",
+        price: 8299000,
+    },
+    {
+        id: 2,
+        name: "Vollsta Phone L3",
+        stock: 10,
+        ram: "16 GB",
+        rom: "512 GB",
+        chipset : "Snapdragon 985",
+        battery: "5300mAh",
+        camera: "56MP f/1.9,22mm (wide), 1/1.56', 0.3µm, PDAF OIS",
+        price: 8995000,
+    },
+    {
+        id: 3,
+        name: "Vollsta Phone L1 pro",
+        stock: 10,
+        ram: "16 GB",
+        rom: "512 GB",
+        chipset : "Snapdragon 995",
+        battery: "5250mAh",
+        camera: "55MP f/1.9,22mm (wide), 1/1.56', 0.3µm, PDAF OIS",
+        price: 11999000,
+    },
+    {
+        id: 4,
+        name: "Vollsta Phone L2 pro",
+        stock: 10,
+        ram: "24 GB",
+        rom: "512 + 256 GB",
+        chipset : "Snapdragon 999",
+        battery: "5250mAh",
+        camera: "55MP f/1.9,22mm (wide), 1/1.56', 0.3µm, PDAF OIS",
+        price: 14750000,
+    },
+    {
+        id: 5,
+        name: "Vollsta Phone L3 pro",
+        stock: 10,
+        ram: "24 + 8 GB",
+        rom: "1024 + 256 GB",
+        chipset : "Snapdragon 999 Elite",
+        battery: "5550mAh",
+        camera: "57MP f/1.9,22mm (wide), 1/1.56', 0.2µm, PDAF OIS",
+        price: 16940000,
+    },
+    {
+        id: 6,
+        name: "Vollsta Phone L4",
+        stock: 10,
+        ram: "32 + 8  GB",
+        rom: "1024 + 512 GB",
+        chipset : "Snapdragon 9s gen 1",
+        battery: "5600mAh",
+        camera: "60MP f/1.9,22mm (wide), 1/1.56', 0.09µm, PDAF OIS",
+        price: 18990000,
+    },
+    {
+        id: 7,
+        name: "Vollsta Phone YGX-1",
+        stock: 10,
+        ram: "8 GB",
+        rom: "4096 + 1024 GB",
+        chipset : "Mediatek Dimensity 6300",
+        battery: "8600mAh",
+        camera: "95MP f/1.9,22mm (ultrawide), 1/1.56', 0.005µm, PDAF OIS",
+        price: 8500000,
+    },
+    {
+        id: 8,
+        name: "Vollsta Phone YGX-1 plus+",
+        stock: 10,
+        ram: "16 GB",
+        rom: "4096 + 2048 GB",
+        chipset : "Mediatek Dimensity 6600",
+        battery: "9600mAh",
+        camera: "110MP f/1.9,22mm (ultrawide), 1/1.56', 0.004µm, KLGV OSX",
+        price: 10925000,
+    },
+]
+
+//  route buat root URLnya
+app.get('/', (req, res) => {
+    res.send('Welcome to the Express server!');
+});
+//  API routenya
+app.get('/api/data', (req, res) => {
+    res.json(DashboardData);
+});
+app.get('/api/datanya', (req, res) => {
+    connection.query('SELECT * FROM products', (err, results) => {
+        if (err) {
+            console.error("Failed to fetch data:", err);
+            res.status(500).send("Database error");
+        } else {
+            res.json(results);
+        }
+    });
+});
+app.post('/api/datanya', (req, res) => {
+    const {
+        name,
+        stock,
+        ram,
+        rom,
+        chipset,
+        battery,
+        camera,
+        price
+    } = req.body;
+
+    const sql = `
+        INSERT INTO products 
+        (name, stock, ram, rom, chipset, battery, camera, price) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    connection.query(sql, [name, stock, ram, rom, chipset, battery, camera, price], (err, result) => {
+        if (err) {
+            console.error("Failed to insert:", err);
+            return res.status(500).send("Error inserting data");
+        }
+        res.send("Product added successfully!");
+    });
+});
+
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
